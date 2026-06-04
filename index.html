@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한그루경영파트너스 | 부결을 승인으로 바꾸는 정책자금 전략가</title>
+<meta name="description" content="다른 기관에서 거절당하셨나요? 7년 경력, 매년 300건 이상 승인 실적. 한그루경영파트너스가 부결을 승인으로 바꿔드립니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1426;
+  --navy-light: #131F38;
+  --navy-mid: #1A2A4A;
+  --gold: #C9A355;
+  --gold-light: #E8D5A3;
+  --gold-dim: rgba(201,163,85,0.15);
+  --cream: #F5F0E8;
+  --cream-dark: #E8E0D0;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-gray: #6B7280;
+  --text-light: #9CA3AF;
+  --red-accent: #DC4A4A;
+  --green-accent: #22C55E;
+  --section-pad: clamp(60px, 10vw, 120px);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--text-dark);
+  background: var(--cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== UTILITY ========== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ========== HEADER ========== */
+header {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  background: rgba(11,20,38,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201,163,85,0.1);
+  transition: all 0.3s;
+}
+header .container {
+  display:flex; align-items:center; justify-content:space-between;
+  height: 72px;
+}
+.logo {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 900; font-size: 18px; color: var(--white);
+  letter-spacing: -0.5px;
+  display: flex; align-items: center; gap: 8px;
+}
+.logo .accent { color: var(--gold); }
+.logo-icon {
+  width: 32px; height: 32px; border-radius: 6px;
+  background: linear-gradient(135deg, var(--gold), #B8903A);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; color: var(--navy);
+}
+nav { display:flex; gap:32px; align-items:center; }
+nav a {
+  color: rgba(255,255,255,0.7); text-decoration:none;
+  font-size:14px; font-weight:500; transition: color 0.2s;
+  letter-spacing: -0.3px;
+}
+nav a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold) !important; color: var(--navy) !important;
+  padding: 10px 24px; border-radius: 6px; font-weight: 700 !important;
+  transition: all 0.2s !important;
+}
+.nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+.mobile-menu { display:none; background:none; border:none; cursor:pointer; }
+.mobile-menu span { display:block; width:24px; height:2px; background:var(--white); margin:5px 0; transition:0.3s; }
+
+/* ========== HERO ========== */
+.hero {
+  background: var(--navy);
+  padding: 160px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(201,163,85,0.08), transparent),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(201,163,85,0.05), transparent);
+}
+.hero::after {
+  content:''; position:absolute; top:0; right:0;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(201,163,85,0.06), transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+.hero .container { position:relative; z-index:1; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,163,85,0.1);
+  border: 1px solid rgba(201,163,85,0.25);
+  border-radius: 100px; padding: 8px 20px;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s ease;
+}
+.hero-badge .dot {
+  width:8px; height:8px; border-radius:50%;
+  background: var(--green-accent);
+  animation: pulse 2s infinite;
+}
+.hero-badge span {
+  font-size:13px; color: var(--gold-light); font-weight:500;
+  letter-spacing: -0.3px;
+}
+
+@keyframes pulse {
+  0%,100% { opacity:1; } 50% { opacity:0.4; }
+}
+
+.hero-pre {
+  font-size: clamp(15px, 2vw, 18px);
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5.5vw, 62px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+.hero h1 .highlight {
+  color: var(--gold);
+  position: relative;
+}
+.hero h1 .highlight::after {
+  content:'';
+  position:absolute; bottom:2px; left:0; right:0; height:4px;
+  background: var(--gold);
+  opacity:0.3;
+  border-radius: 2px;
+}
+.hero h1 .strikethrough {
+  color: rgba(255,255,255,0.3);
+  text-decoration: line-through;
+  text-decoration-color: var(--red-accent);
+  text-decoration-thickness: 3px;
+}
+
+.hero-desc {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 48px;
+  letter-spacing: -0.3px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.hero-stats {
+  display: flex; gap: 48px; flex-wrap: wrap;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+.hero-stat {
+  text-align: left;
+}
+.hero-stat .number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-stat .label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(24px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* ========== PAIN SECTION ========== */
+.pain-section {
+  padding: var(--section-pad) 0;
+  background: var(--cream);
+}
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content:''; width:24px; height:1px; background: var(--gold);
+}
+.section-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 900;
+  color: var(--text-dark);
+  line-height: 1.3;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+.section-desc {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--text-gray);
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.pain-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 36px 32px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.pain-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: var(--red-accent);
+  opacity:0.7;
+}
+.pain-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+.pain-icon {
+  width:48px; height:48px; border-radius:12px;
+  background: rgba(220,74,74,0.08);
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px; margin-bottom:20px;
+}
+.pain-card h3 {
+  font-size: 18px; font-weight: 700; color: var(--text-dark);
+  margin-bottom: 12px; letter-spacing: -0.5px;
+}
+.pain-card p {
+  font-size: 14px; color: var(--text-gray); line-height: 1.7;
+}
+
+/* ========== SOLUTION / APPROACH ========== */
+.solution-section {
+  padding: var(--section-pad) 0;
+  background: var(--navy);
+  position: relative;
+}
+.solution-section .section-title { color: var(--white); }
+.solution-section .section-desc { color: rgba(255,255,255,0.55); }
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+.approach-card {
+  background: var(--navy-light);
+  border: 1px solid rgba(201,163,85,0.12);
+  border-radius: 16px;
+  padding: 40px 32px;
+  transition: all 0.3s;
+  position: relative;
+}
+.approach-card:hover {
+  border-color: rgba(201,163,85,0.35);
+  transform: translateY(-4px);
+}
+.approach-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px; font-weight: 900;
+  color: rgba(201,163,85,0.15);
+  line-height:1; margin-bottom:16px;
+}
+.approach-card h3 {
+  font-size: 20px; font-weight: 700; color: var(--white);
+  margin-bottom: 12px; letter-spacing: -0.5px;
+}
+.approach-card p {
+  font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.8;
+}
+
+.comparison-box {
+  background: var(--navy-light);
+  border: 1px solid rgba(201,163,85,0.15);
+  border-radius: 20px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.comp-col h4 {
+  font-size: 14px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.comp-col.bad h4 { color: rgba(255,255,255,0.4); }
+.comp-col.good h4 { color: var(--gold); }
+.comp-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0;
+  font-size: 15px; line-height: 1.6;
+}
+.comp-col.bad .comp-item { color: rgba(255,255,255,0.35); }
+.comp-col.good .comp-item { color: rgba(255,255,255,0.85); }
+.comp-item .icon { flex-shrink:0; font-size:16px; margin-top:3px; }
+.comp-divider {
+  width: 1px; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(201,163,85,0.3), transparent);
+  position: relative;
+}
+.comp-divider::after {
+  content:'VS'; position:absolute; top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  background: var(--navy-mid); color: var(--gold);
+  font-size:12px; font-weight:900; letter-spacing:2px;
+  padding: 12px 8px; border-radius: 6px;
+  border: 1px solid rgba(201,163,85,0.2);
+}
+
+/* ========== CASES ========== */
+.cases-section {
+  padding: var(--section-pad) 0;
+  background: var(--cream);
+}
+.cases-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  flex-wrap: wrap; gap: 24px;
+  margin-bottom: 48px;
+}
+.cases-header .right-note {
+  font-size: 13px; color: var(--text-light);
+  background: var(--white);
+  padding: 8px 16px; border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.case-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 32px 28px;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.case-card:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.06); }
+.case-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+.case-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 700;
+  color: var(--red-accent);
+  background: rgba(220,74,74,0.08);
+  padding: 4px 10px; border-radius: 4px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+.case-badge.approved {
+  color: var(--green-accent);
+  background: rgba(34,197,94,0.08);
+}
+.case-industry {
+  font-size: 13px; color: var(--text-light);
+  font-weight: 500; margin-bottom: 4px;
+}
+.case-title {
+  font-size: 18px; font-weight: 700; color: var(--text-dark);
+  letter-spacing: -0.5px; margin-bottom: 20px;
+  line-height: 1.4;
+}
+.case-details {
+  display: flex; flex-direction: column; gap: 12px;
+}
+.case-detail {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.case-detail:last-child { border-bottom:none; padding-bottom:0; }
+.case-detail .key {
+  font-size: 13px; color: var(--text-light); font-weight: 400;
+}
+.case-detail .value {
+  font-size: 15px; font-weight: 700; color: var(--text-dark);
+}
+.case-detail .value.gold { color: var(--gold); }
+
+/* ========== BUDGET BANNER ========== */
+.budget-banner {
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  padding: 64px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.budget-banner::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse at center, rgba(201,163,85,0.06), transparent 70%);
+}
+.budget-banner .container { position: relative; z-index:1; }
+.budget-numbers {
+  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.budget-item { text-align: center; }
+.budget-year {
+  font-size: 14px; color: rgba(255,255,255,0.4);
+  font-weight: 500; margin-bottom: 8px;
+}
+.budget-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 900;
+  color: var(--gold);
+}
+.budget-arrow { color: rgba(255,255,255,0.15); font-size:32px; align-self:center; }
+.budget-caption {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: rgba(255,255,255,0.5);
+  max-width: 500px; margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ========== FORM SECTION ========== */
+.form-section {
+  padding: var(--section-pad) 0;
+  background: var(--cream);
+}
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.form-left {}
+.form-left .section-title { margin-bottom: 24px; }
+.form-promise {
+  display: flex; flex-direction: column; gap: 16px;
+  margin-top: 40px;
+}
+.promise-item {
+  display: flex; align-items: center; gap: 14px;
+  font-size: 15px; color: var(--text-gray);
+  line-height: 1.5;
+}
+.promise-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: var(--gold-dim);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.form-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 44px 40px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.06);
+}
+.form-card h3 {
+  font-size: 20px; font-weight: 700; color: var(--text-dark);
+  margin-bottom: 8px; letter-spacing: -0.5px;
+}
+.form-card .sub {
+  font-size: 14px; color: var(--text-light);
+  margin-bottom: 32px;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-size: 13px; font-weight: 600;
+  color: var(--text-dark); margin-bottom: 8px;
+  letter-spacing: -0.3px;
+}
+.form-group label .req { color: var(--red-accent); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 14px 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  font-size: 15px; font-family: inherit;
+  background: #FAFAF8;
+  color: var(--text-dark);
+  transition: all 0.2s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-dim);
+  background: var(--white);
+}
+.form-group textarea { resize:vertical; min-height:80px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-submit {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  color: var(--gold);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: -0.3px;
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(11,20,38,0.3);
+}
+.form-submit::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(135deg, transparent, rgba(201,163,85,0.1));
+  transition: opacity 0.3s;
+  opacity:0;
+}
+.form-submit:hover::after { opacity:1; }
+
+.form-privacy {
+  font-size: 12px; color: var(--text-light);
+  margin-top: 16px; text-align: center;
+  line-height: 1.6;
+}
+.form-privacy a { color: var(--gold); text-decoration: underline; }
+
+/* ========== TRUST BAR ========== */
+.trust-bar {
+  background: var(--white);
+  padding: 48px 0;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.trust-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  text-align: center;
+}
+.trust-item .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 900;
+  color: var(--navy);
+  line-height: 1;
+}
+.trust-item .txt {
+  font-size: 13px; color: var(--text-light);
+  margin-top: 6px;
+}
+.trust-divider {
+  width:1px; height:40px;
+  background: rgba(0,0,0,0.08);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--navy);
+  padding: 56px 0 40px;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.footer-brand {
+  font-size: 16px; font-weight: 700; color: var(--white);
+  margin-bottom: 16px;
+}
+.footer-info { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 2; }
+.footer-contact {
+  text-align: right;
+}
+.footer-phone {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 900;
+  color: var(--gold);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.footer-hours { font-size: 13px; color: rgba(255,255,255,0.35); }
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.2);
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ========== FLOATING CTA ========== */
+.floating-cta {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 99;
+  display: flex; flex-direction: column; gap: 12px;
+  align-items: flex-end;
+}
+.float-btn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 24px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 14px; font-weight: 700;
+  transition: all 0.3s;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+.float-btn.phone {
+  background: var(--navy); color: var(--gold);
+  border: 1px solid rgba(201,163,85,0.2);
+}
+.float-btn.phone:hover { background: var(--navy-light); transform: translateY(-2px); }
+.float-btn.form-jump {
+  background: var(--gold); color: var(--navy);
+}
+.float-btn.form-jump:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  nav { display: none; }
+  .mobile-menu { display: block; }
+  .hero { padding: 130px 0 72px; }
+  .hero-stats { gap: 32px; }
+  .comparison-box {
+    grid-template-columns: 1fr;
+    gap: 24px; padding: 32px 24px;
+  }
+  .comp-divider {
+    width: 100%; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(201,163,85,0.3), transparent);
+  }
+  .comp-divider::after { display:none; }
+  .form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .form-card { padding: 32px 24px; }
+  .budget-numbers { gap: 24px; }
+  .budget-arrow { display: none; }
+  .footer-contact { text-align: left; }
+  .trust-inner { gap: 32px; }
+  .trust-divider { display:none; }
+  .floating-cta { bottom:16px; right:16px; }
+  .float-btn { padding: 12px 20px; font-size:13px; }
+}
+@media (max-width: 480px) {
+  .form-row { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .hero-stat .number { font-size: 36px; }
+}
+
+/* ========== ANIMATIONS ========== */
+.reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1; transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-icon">한</div>
+      한그루<span class="accent">경영파트너스</span>
+    </div>
+    <nav>
+      <a href="#pain">이런 고민이라면</a>
+      <a href="#approach">컨설팅 방식</a>
+      <a href="#cases">승인 사례</a>
+      <a href="#contact" class="nav-cta">무료 상담 신청</a>
+    </nav>
+    <button class="mobile-menu" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>현재 상담 가능 · 평균 응답 5분 이내</span>
+    </div>
+    <p class="hero-pre">정책자금 전문 컨설팅 · 한그루경영파트너스</p>
+    <h1>
+      다른 데서<br>
+      <span class="strikethrough">안 된다</span>고요?<br>
+      <span class="highlight">저희가 되게 합니다.</span>
+    </h1>
+    <p class="hero-desc">
+      기보·신보·중진공에서 부결 받으셨나요?<br>
+      서류 미비, 업력 부족, 재무 이슈로 거절당하셨나요?<br>
+      한그루는 <strong>'안 되는 건'</strong>을 <strong>'되게 만드는'</strong> 곳입니다.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="number">7년</div>
+        <div class="label">정책자금 전문 경력</div>
+      </div>
+      <div class="hero-stat">
+        <div class="number">300+</div>
+        <div class="label">매년 승인 건수</div>
+      </div>
+      <div class="hero-stat">
+        <div class="number">2,100+</div>
+        <div class="label">누적 컨설팅 실적</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET BANNER -->
+<section class="budget-banner">
+  <div class="container">
+    <div class="budget-numbers">
+      <div class="budget-item">
+        <div class="budget-year">2023년</div>
+        <div class="budget-amount">4조 9,800억</div>
+      </div>
+      <div class="budget-arrow">→</div>
+      <div class="budget-item">
+        <div class="budget-year">2024년</div>
+        <div class="budget-amount">5조 1,096억</div>
+      </div>
+      <div class="budget-arrow">→</div>
+      <div class="budget-item">
+        <div class="budget-year">2025년</div>
+        <div class="budget-amount">7조 2,741억</div>
+      </div>
+    </div>
+    <p class="budget-caption">
+      매년 늘어나는 정부 정책자금,<br>
+      몰라서 못 받는 기업이 대부분입니다.
+    </p>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="pain-section" id="pain">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">혹시 이런 상황이라면</div>
+      <h2 class="section-title">
+        다른 곳에서 이미<br>거절 받으셨나요?
+      </h2>
+      <p class="section-desc">
+        기관의 '부결' 통보를 받으면 대부분 포기합니다.<br>
+        하지만 부결 사유의 80%는 전략의 문제이지, 자격의 문제가 아닙니다.
+      </p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon">📋</div>
+        <h3>"서류가 부족하다"고 들으셨나요?</h3>
+        <p>서류가 아니라 기관이 원하는 스토리가 빠진 겁니다. 같은 서류도 어떻게 구성하느냐에 따라 결과가 달라집니다.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">🏢</div>
+        <h3>"업력이 짧아서 안 된다"고요?</h3>
+        <p>업력 1년 미만도 승인 가능합니다. 기술성 평가, 사업계획서 전략으로 업력 핸디캡을 극복한 사례가 다수입니다.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon">📊</div>
+        <h3>"재무상태가 안 좋다"는 이유로?</h3>
+        <p>적자 기업도, 부채비율이 높은 기업도 승인됩니다. 재무를 어떤 프레임으로 설명하느냐가 핵심입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="solution-section" id="approach">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" style="color:var(--gold)">한그루의 접근법</div>
+      <h2 class="section-title">"안 된다"를 "된다"로 바꾸는<br>3단계 전략</h2>
+      <p class="section-desc">
+        단순히 서류를 대행하는 곳이 아닙니다.<br>
+        기관의 심사 기준을 역설계하여, 승인 가능한 구조를 먼저 설계합니다.
+      </p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-card reveal">
+        <div class="approach-num">01</div>
+        <h3>부결 사유 정밀 진단</h3>
+        <p>기존 부결 사유를 하나하나 분해합니다. 서류 문제인지, 재무 구조 문제인지, 사업계획서 논리 문제인지 정확히 짚어냅니다.</p>
+      </div>
+      <div class="approach-card reveal">
+        <div class="approach-num">02</div>
+        <h3>맞춤형 승인 전략 수립</h3>
+        <p>기보, 신보, 중진공 — 기관마다 심사 포인트가 다릅니다. 귀사에 가장 유리한 기관과 자금을 선별하고, 심사관이 YES라고 할 수밖에 없는 구조를 설계합니다.</p>
+      </div>
+      <div class="approach-card reveal">
+        <div class="approach-num">03</div>
+        <h3>서류·면담 완벽 세팅</h3>
+        <p>기업소개서, 기술사업계획서, 재무 자료를 기관 맞춤형으로 재구성합니다. 면담 시나리오까지 사전 리허설하여 승인률을 극대화합니다.</p>
+      </div>
+    </div>
+
+    <!-- Comparison -->
+    <div class="comparison-box reveal">
+      <div class="comp-col bad">
+        <h4>일반 컨설팅</h4>
+        <div class="comp-item"><span class="icon">✕</span> 서류 대행만 해주고 끝</div>
+        <div class="comp-item"><span class="icon">✕</span> 부결되면 "조건이 안 됩니다"</div>
+        <div class="comp-item"><span class="icon">✕</span> 획일적 사업계획서 템플릿</div>
+        <div class="comp-item"><span class="icon">✕</span> 한 기관만 시도 후 종료</div>
+      </div>
+      <div class="comp-divider"></div>
+      <div class="comp-col good">
+        <h4>한그루경영파트너스</h4>
+        <div class="comp-item"><span class="icon" style="color:var(--gold)">✓</span> 부결 원인 진단 → 전략 재설계</div>
+        <div class="comp-item"><span class="icon" style="color:var(--gold)">✓</span> 안 되는 이유를 되게 만드는 이유로</div>
+        <div class="comp-item"><span class="icon" style="color:var(--gold)">✓</span> 기관별 맞춤 사업계획서</div>
+        <div class="comp-item"><span class="icon" style="color:var(--gold)">✓</span> 복수 기관 동시 전략 수립</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases-section" id="cases">
+  <div class="container">
+    <div class="cases-header reveal">
+      <div>
+        <div class="section-label">승인 사례</div>
+        <h2 class="section-title">부결 → 승인,<br>실제 전환 사례</h2>
+      </div>
+      <div class="right-note">※ 고객 정보 보호를 위해 업종명으로 표기합니다</div>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card reveal">
+        <div class="case-badge">타 기관 부결 이력</div>
+        <div class="case-industry">제조업 · 경기도</div>
+        <div class="case-title">기보 2회 부결 → 신보 전환 승인</div>
+        <div class="case-details">
+          <div class="case-detail">
+            <span class="key">승인 금액</span>
+            <span class="value gold">3억 원</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">소요 기간</span>
+            <span class="value">4주</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">핵심 전략</span>
+            <span class="value">재무구조 리프레이밍</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-badge">타 기관 부결 이력</div>
+        <div class="case-industry">IT·소프트웨어 · 서울</div>
+        <div class="case-title">업력 8개월, 매출 無 → 기보 승인</div>
+        <div class="case-details">
+          <div class="case-detail">
+            <span class="key">승인 금액</span>
+            <span class="value gold">2억 원</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">소요 기간</span>
+            <span class="value">3주</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">핵심 전략</span>
+            <span class="value">기술성 평가 집중 공략</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-badge">타 기관 부결 이력</div>
+        <div class="case-industry">건설업 · 인천</div>
+        <div class="case-title">부채비율 400% → 중진공 승인</div>
+        <div class="case-details">
+          <div class="case-detail">
+            <span class="key">승인 금액</span>
+            <span class="value gold">5억 원</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">소요 기간</span>
+            <span class="value">6주</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">핵심 전략</span>
+            <span class="value">부채 성격 분류 + 성장성 어필</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-badge">타 기관 부결 이력</div>
+        <div class="case-industry">식품제조 · 충남</div>
+        <div class="case-title">신보 부결 + 신용등급 낮음 → 기보 승인</div>
+        <div class="case-details">
+          <div class="case-detail">
+            <span class="key">승인 금액</span>
+            <span class="value gold">1.5억 원</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">소요 기간</span>
+            <span class="value">3주</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">핵심 전략</span>
+            <span class="value">HACCP 인증 + 수출 계획 연계</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-badge">타 기관 부결 이력</div>
+        <div class="case-industry">유통·물류 · 대구</div>
+        <div class="case-title">2년 연속 적자 → 중진공 혁신성장 승인</div>
+        <div class="case-details">
+          <div class="case-detail">
+            <span class="key">승인 금액</span>
+            <span class="value gold">4억 원</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">소요 기간</span>
+            <span class="value">5주</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">핵심 전략</span>
+            <span class="value">물류 디지털 전환 사업계획</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-badge">타 기관 부결 이력</div>
+        <div class="case-industry">의료기기 · 대전</div>
+        <div class="case-title">다세대주택 소재지 이슈 → 기보 승인</div>
+        <div class="case-details">
+          <div class="case-detail">
+            <span class="key">승인 금액</span>
+            <span class="value gold">2.5억 원</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">소요 기간</span>
+            <span class="value">4주</span>
+          </div>
+          <div class="case-detail">
+            <span class="key">핵심 전략</span>
+            <span class="value">사업장 이전 + 연구소 설립 병행</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <div class="num">7년</div>
+        <div class="txt">정책자금 전문 경력</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="num">2,100+</div>
+        <div class="txt">누적 컨설팅 건수</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="num">300+</div>
+        <div class="txt">연간 승인 건수</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="num">5분</div>
+        <div class="txt">평균 응답 시간</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="form-section" id="contact">
+  <div class="container">
+    <div class="form-wrapper">
+      <div class="form-left reveal">
+        <div class="section-label">무료 상담 신청</div>
+        <h2 class="section-title">
+          부결 이력이 있어도<br>괜찮습니다.<br>
+          <span style="color:var(--gold)">먼저 이야기해 주세요.</span>
+        </h2>
+        <p class="section-desc" style="margin-bottom:0">
+          상담 신청 후 5분 이내 연락드립니다.<br>
+          현재 상황을 간단히 알려주시면,<br>
+          승인 가능 여부와 전략을 바로 안내해 드리겠습니다.
+        </p>
+        <div class="form-promise">
+          <div class="promise-item">
+            <div class="promise-icon">⚡</div>
+            <span>신청 후 <strong>5분 이내</strong> 전문 상담사 콜백</span>
+          </div>
+          <div class="promise-item">
+            <div class="promise-icon">🔒</div>
+            <span>기업 정보 <strong>철저 보안</strong> · 외부 유출 없음</span>
+          </div>
+          <div class="promise-item">
+            <div class="promise-icon">💰</div>
+            <span>초기 상담 및 승인 가능성 진단 <strong>완전 무료</strong></span>
+          </div>
+          <div class="promise-item">
+            <div class="promise-icon">🎯</div>
+            <span>부결 이력 보유 기업 <strong>전문 상담</strong></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-card reveal">
+        <h3>무료 상담 신청서</h3>
+        <p class="sub">작성해 주시면 5분 이내 연락드리겠습니다.</p>
+        <form id="consultForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>대표님 성함 <span class="req">*</span></label>
+              <input type="text" name="name" placeholder="홍길동" required>
+            </div>
+            <div class="form-group">
+              <label>연락처 <span class="req">*</span></label>
+              <input type="tel" name="phone" placeholder="010-0000-0000" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>업종 <span class="req">*</span></label>
+              <input type="text" name="industry" placeholder="예: 제조업, IT, 건설업" required>
+            </div>
+            <div class="form-group">
+              <label>소재지</label>
+              <input type="text" name="location" placeholder="예: 서울, 경기, 인천">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>업력</label>
+              <select name="business_years">
+                <option value="">선택해 주세요</option>
+                <option>1년 미만</option>
+                <option>1~3년</option>
+                <option>3~5년</option>
+                <option>5년 이상</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>필요 자금</label>
+              <select name="budget">
+                <option value="">선택해 주세요</option>
+                <option>5천만 원 미만</option>
+                <option>5천만 ~ 2억 원</option>
+                <option>2억 ~ 5억 원</option>
+                <option>5억 원 이상</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>상담 내용</label>
+            <textarea name="message" placeholder="부결 이력이 있으시면 기관명과 사유를 간단히 적어주세요. 더 정확한 전략을 안내드릴 수 있습니다."></textarea>
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:400;color:var(--text-gray)">
+              <input type="checkbox" required style="width:auto;accent-color:var(--gold)">
+              <span><a href="#" style="color:var(--gold)">개인정보 수집·이용</a>에 동의합니다. (필수)</span>
+            </label>
+          </div>
+          <button type="submit" class="form-submit">무료 상담 신청하기</button>
+        </form>
+        <p class="form-privacy">
+          입력하신 정보는 상담 목적으로만 사용되며, 상담 완료 후 즉시 파기됩니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">한그루경영파트너스</div>
+        <div class="footer-info">
+          사업자등록번호 : 303-72-00605<br>
+          대표 : 채현인<br>
+          주소 : 인천광역시 서구 청라커낼로 270, 2층 2306호 (청라동, 커낼힐스빌)<br>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-phone">1844-0265</div>
+        <div class="footer-hours">평일 09:00 – 18:00 · 토·일·공휴일 휴무</div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2025 한그루경영파트너스. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="floating-cta">
+  <a href="tel:18440265" class="float-btn phone">📞 1844-0265</a>
+  <a href="#contact" class="float-btn form-jump">무료 상담 신청 →</a>
+</div>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Stagger animation for grid children
+document.querySelectorAll('.pain-grid .reveal, .cases-grid .reveal, .approach-grid .reveal').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.1}s`;
+});
+
+// Form submit → Make Webhook
+async function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  const form = e.target;
+  
+  // 버튼 로딩 상태
+  btn.textContent = '전송 중...';
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+
+  // 폼 데이터 수집
+  const now = new Date();
+  const submitted_at = now.getFullYear() + '-' +
+    String(now.getMonth()+1).padStart(2,'0') + '-' +
+    String(now.getDate()).padStart(2,'0') + ' ' +
+    String(now.getHours()).padStart(2,'0') + ':' +
+    String(now.getMinutes()).padStart(2,'0') + ':' +
+    String(now.getSeconds()).padStart(2,'0');
+
+  const data = {
+    name: form.querySelector('[name="name"]').value.trim(),
+    phone: form.querySelector('[name="phone"]').value.trim(),
+    industry: form.querySelector('[name="industry"]').value.trim(),
+    location: form.querySelector('[name="location"]').value.trim(),
+    business_years: form.querySelector('[name="business_years"]').value,
+    budget: form.querySelector('[name="budget"]').value,
+    message: form.querySelector('[name="message"]').value.trim(),
+    submitted_at: submitted_at
+  };
+
+  try {
+    const response = await fetch('https://hook.us2.make.com/q4ihn9omqs6g2dqi4ujapm4iec2jinjs', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      btn.textContent = '✓ 신청이 완료되었습니다!';
+      btn.style.background = '#22C55E';
+      btn.style.color = '#fff';
+      btn.style.opacity = '1';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = '무료 상담 신청하기';
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 4000);
+    } else {
+      throw new Error('서버 응답 오류');
+    }
+  } catch (err) {
+    btn.textContent = '전송 실패 — 다시 시도해주세요';
+    btn.style.background = '#DC4A4A';
+    btn.style.color = '#fff';
+    btn.style.opacity = '1';
+    setTimeout(() => {
+      btn.textContent = '무료 상담 신청하기';
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+    }, 3000);
+  }
+}
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  if (window.scrollY > 100) {
+    header.style.boxShadow = '0 4px 24px rgba(0,0,0,0.15)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+});
+</script>
+
+</body>
+</html>
