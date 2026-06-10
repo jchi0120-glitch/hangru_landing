@@ -7,23 +7,6 @@
 <meta name="description" content="다른 기관에서 거절당하셨나요? 7년 경력, 매년 300건 이상 승인 실적. 한그루경영파트너스가 부결을 승인으로 바꿔드립니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1266365801706057');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1266365801706057&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 <style>
 :root {
   --navy: #0B1426;
@@ -735,9 +718,9 @@ footer {
       <a href="#pain">이런 고민이라면</a>
       <a href="#approach">컨설팅 방식</a>
       <a href="#cases">승인 사례</a>
-      <a href="#contact" class="nav-cta">무료 상담 신청</a>
+      <a href="#apply" class="nav-cta">무료 상담 신청</a>
     </nav>
-    <button class="mobile-menu" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    <button class="mobile-menu" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -1082,7 +1065,7 @@ footer {
           </div>
         </div>
       </div>
-      <div class="form-card reveal">
+      <div class="form-card reveal" id="apply" style="scroll-margin-top:90px">
         <h3>무료 상담 신청서</h3>
         <p class="sub">작성해 주시면 5분 이내 연락드리겠습니다.</p>
         <form id="consultForm" onsubmit="handleSubmit(event)">
@@ -1174,7 +1157,7 @@ footer {
 <!-- FLOATING CTA -->
 <div class="floating-cta">
   <a href="tel:18440265" class="float-btn phone">📞 1844-0265</a>
-  <a href="#contact" class="float-btn form-jump">무료 상담 신청 →</a>
+  <a href="#apply" class="float-btn form-jump">무료 상담 신청 →</a>
 </div>
 
 <script>
